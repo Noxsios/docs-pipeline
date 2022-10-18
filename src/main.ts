@@ -8,8 +8,10 @@ async function run() {
 
     // Get github context data
     const context = github.context;
-    console.log(`We can even get context data, like the repo: ${context.repo.repo}`)
-  } catch (error) {
+    console.log(
+      `We can even get context data, like the repo: ${context.repo.repo}`
+    );
+  } catch (error: any) {
     core.setFailed(error.message);
   }
 }
